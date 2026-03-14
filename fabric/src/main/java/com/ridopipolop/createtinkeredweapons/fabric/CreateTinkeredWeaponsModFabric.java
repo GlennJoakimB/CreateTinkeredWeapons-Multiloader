@@ -1,4 +1,4 @@
-package net.examplemod.fabric;
+package com.ridopipolop.createtinkeredweapons.fabric;
 
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.examplemod.ExampleBlocks;

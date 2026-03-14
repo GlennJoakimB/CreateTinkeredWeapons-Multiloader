@@ -1,4 +1,4 @@
-package net.examplemod;
+package com.ridopipolop.createtinkeredweapons;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 

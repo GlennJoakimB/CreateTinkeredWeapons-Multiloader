@@ -1,4 +1,4 @@
-package net.examplemod;
+package com.ridopipolop.createtinkeredweapons;
 
 import com.simibubi.create.Create;
 import net.minecraft.resources.ResourceLocation;
