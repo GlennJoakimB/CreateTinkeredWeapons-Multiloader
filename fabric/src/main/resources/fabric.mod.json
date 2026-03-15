@@ -1,22 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "createtinkeredweapons",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Create: Tinkered Weapons",
+  "description": "Adds some unique weapons for both variaty and mobility!",
   "authors": [
-    "Me!"
+    "RidoPipolop"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/GlennJoakimB/CreateTinkeredWeapons-Multiloader"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "MIT",
+  "icon": "assets/createtinkeredweapons/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "com.ridopipolop.createtinkeredweapons.fabric.CreateTinkeredWeaponsFabric"
     ]
   },
   "depends": {

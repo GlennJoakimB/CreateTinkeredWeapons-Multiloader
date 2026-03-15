@@ -2,7 +2,7 @@ package com.ridopipolop.createtinkeredweapons;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-public class ExampleExpectPlatform {
+public class ExpectedPlatform {
     /**
      * an example of {@link ExpectPlatform}.
      * <p>
