@@ -16,10 +16,9 @@ subprojects {
 
     repositories {
         maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
-
-        // mavens used on both forge and fabric
         maven { url = "https://maven.blamejared.com/" } // JEI
-        maven { url = "https://maven.tterrag.com/" } // Flywheel on both, Create and Registrate on forge
+        maven { url = "https://maven.tterrag.com" } // Registrate
+        maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
     }
 
     dependencies {
@@ -40,9 +39,9 @@ allprojects {
     group = maven_group
 
     // Formats the mod version to include the loader, Minecraft version, and build number (if present)
-    // example: 1.0.0+fabric-1.18.2-build.100
+    // CreateTinkeredWeapons: 1.0.0+fabric-1.18.2-100
     String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
-    version = "$mod_version+$project.name-$minecraft_version" + (buildNumber != null ? "-build.$buildNumber" : "")
+    version = "$mod_version+$project.name-$minecraft_version" + (buildNumber != null ? "-$buildNumber" : "")
 
     tasks.withType(JavaCompile).configureEach {
         options.encoding = "UTF-8"
