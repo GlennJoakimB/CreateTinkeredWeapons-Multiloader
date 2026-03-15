@@ -1,19 +1,32 @@
-build/
-*.ipr
-run/
-*.iws
-out/
-*.iml
+# gradle
 .gradle/
-output/
-bin/
-libs/
+build/
+out/
+classes/
 
+# eclipse
+*.launch
+
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+.settings/
+.vscode/
+bin/
 .classpath
 .project
-.idea/
-classes/
+
+# macos
+*.DS_Store
+
+# fabric
+run/
+
+
+output/
+libs/
 .metadata
-.vscode
-.settings
-*.launch
