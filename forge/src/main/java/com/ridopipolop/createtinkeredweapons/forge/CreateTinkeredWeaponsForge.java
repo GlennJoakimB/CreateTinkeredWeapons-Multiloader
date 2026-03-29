@@ -7,9 +7,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(CreateTinkeredWeapons.MOD_ID)
 public class CreateTinkeredWeaponsForge {
-    public CreateTinkeredWeaponsForge() {
+    public CreateTinkeredWeaponsForge(FMLJavaModLoadingContext context) {
         // registrate must be given the mod event bus on forge before registration
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = context.getModEventBus();
         CreateTinkeredWeapons.REGISTRATE.registerEventListeners(eventBus);
         CreateTinkeredWeapons.init();
     }
