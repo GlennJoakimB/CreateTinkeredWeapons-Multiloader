@@ -1,6 +1,5 @@
 package com.ridopipolop.createtinkeredweapons;
 
-import com.simibubi.create.Create;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -14,8 +13,8 @@ public class CreateTinkeredWeapons {
 
 
     public static void init() {
-      LOGGER.info("{} initializing! Create version: {} on platform: {}", NAME, Create.VERSION, ExpectedPlatform.platformName());
-      REGISTRATE.register();
+      LOGGER.info("{} initializing! On platform: {}", NAME, ExpectedPlatform.platformName());
+      // REGISTRATE.register();
     }
 
     public static ResourceLocation id(String path) {
