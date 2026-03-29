@@ -1,0 +1,9 @@
+{
+  "item.createtinkeredweapons.broad_glaive":"Broad Glaive",
+  "item.createtinkeredweapons.impact_axe":"Impact Axe",
+  "itemGroup.createtinkeredweapons.main":"Create: Tinkered Weapons",
+
+  "item.createtinkeredweapons.impact_axe.mode.knockback": "Mode: Knockback",
+  "item.createtinkeredweapons.impact_axe.mode.explosive": "Mode: Explosive",
+  "item.createtinkeredweapons.impact_axe.mode.toggle_description": "Shift-right-click to toggle"
+}

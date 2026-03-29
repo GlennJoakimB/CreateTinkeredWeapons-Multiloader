@@ -1,0 +1,144 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+  "texture_size": [32, 32],
+	"textures": {
+		"0": "createtinkeredweapons:item/broad_glaive",
+		"particle": "createtinkeredweapons:item/broad_glaive"
+	},
+	"elements": [
+		{
+			"name": "Blade",
+			"from": [7.75, 13, 6.5],
+			"to": [8.25, 22.5, 9.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.75, 8]},
+			"faces": {
+				"north": {"uv": [2, 6.5, 2.5, 16], "texture": "#0"},
+				"east": {"uv": [5.5, 6.5, 2.5, 16], "texture": "#0"},
+				"south": {"uv": [5.5, 6.5, 6, 16], "texture": "#0"},
+				"west": {"uv": [2.5, 6.5, 5.5, 16], "texture": "#0"},
+				"up": {"uv": [2.5, 6, 5.5, 6.5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "BladeBracket",
+			"from": [7.25, 13, 7.25],
+			"to": [8.75, 15.5, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 14.25, 8]},
+			"faces": {
+				"north": {"uv": [4.5, 0, 2, 1.5], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [4.5, 1.5, 2, 3], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4.5, 3, 2, 4.5], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [4.5, 3, 2, 1.5], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [3.5, 4.5, 2, 6], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gear case top",
+			"from": [7, 12, 6.25],
+			"to": [9, 13, 9.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 12.5, 8]},
+			"faces": {
+				"north": {"uv": [4.5, 0, 6.5, 1], "texture": "#0"},
+				"east": {"uv": [4.5, 0, 5.5, 3.5], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4.5, 0, 6.5, 1], "texture": "#0"},
+				"west": {"uv": [4.5, 0, 5.5, 3.5], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [4.5, 0, 6.5, 3.5], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [4.5, 0, 6.5, 3.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "UpperHandleBracket",
+			"from": [7.35, 10, 6.75],
+			"to": [9.35, 11, 8.75],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 6.25, 8.1]},
+			"faces": {
+				"north": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"east": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"south": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"west": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"up": {"uv": [4.5, 0, 6.5, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [4.5, 0, 6.5, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "HandleBracket",
+			"from": [7.35, 3, 6.75],
+			"to": [9.35, 4, 8.75],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 6.25, 8.1]},
+			"faces": {
+				"north": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"east": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"south": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"west": {"uv": [4.5, 2, 6.5, 3], "texture": "#0"},
+				"up": {"uv": [4.5, 0, 6.5, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [4.5, 0, 6.5, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "SideHandle",
+			"from": [8.1, 4, 6.2],
+			"to": [8.85, 10, 6.95],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8.6, 7, 7.3]},
+			"faces": {
+				"north": {"uv": [1, 0, 2, 8], "texture": "#0"},
+				"east": {"uv": [1, 1, 2, 9], "texture": "#0"},
+				"south": {"uv": [1, 0, 2, 8], "texture": "#0"},
+				"west": {"uv": [1, 1, 2, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Handle",
+			"from": [7.5, -6, 7.5],
+			"to": [8.5, 10, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"down": {"uv": [0, 15, 1, 16], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, -0.5, 0.75]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, -0.5, 0.75]
+		},
+		"firstperson_righthand": {
+			"rotation": [-6, 0, 0],
+			"translation": [1, 1, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-6, 0, 0],
+			"translation": [1, 1, 0]
+		},
+		"ground": {
+			"rotation": [-90, 90, 0]
+		},
+		"gui": {
+			"rotation": [90, 45, -90],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"fixed": {
+			"rotation": [90, -45, 90]
+		}
+	},
+	"groups": [
+		{
+			"name": "Blade",
+			"origin": [7.5, 17, 7.75],
+			"color": 0,
+			"children": [0, 1, 2]
+		},
+		{
+			"name": "Handle",
+			"origin": [8, 0, 8],
+			"color": 0,
+			"children": [3, 4, 5, 6]
+		}
+	]
+}
