@@ -2,6 +2,8 @@ package com.ridopipolop.createtinkeredweapons.fabric.registry;
 
 import static com.ridopipolop.createtinkeredweapons.CreateTinkeredWeapons.REGISTRATE;
 
+import com.ridopipolop.createtinkeredweapons.content.weapons.broad_glaive.BroadGlaiveItem;
+import com.ridopipolop.createtinkeredweapons.content.weapons.broad_glaive.BroadGlaiveItemRenderer;
 import com.ridopipolop.createtinkeredweapons.content.weapons.impact_axe.ImpactAxeItem;
 import com.ridopipolop.createtinkeredweapons.content.weapons.impact_axe.ImpactAxeItemRenderer;
 import com.ridopipolop.createtinkeredweapons.registry.ModItems;
@@ -14,6 +16,13 @@ public class ModItemsFabric {
         .item("impact_axe", ImpactAxeItem::new)
         .properties(p -> p.stacksTo(1).durability(350))
         .transform(CreateRegistrate.customRenderedItem(() -> ImpactAxeItemRenderer::new))
+        .model(AssetLookup.itemModelWithPartials())
+        .register();
+
+    ModItems.BROAD_GLAIVE = REGISTRATE
+        .item("broad_glaive", BroadGlaiveItem::new)
+        .properties(p -> p.stacksTo(1).durability(500))
+        .transform(CreateRegistrate.customRenderedItem(() -> BroadGlaiveItemRenderer::new))
         .model(AssetLookup.itemModelWithPartials())
         .register();
   }
