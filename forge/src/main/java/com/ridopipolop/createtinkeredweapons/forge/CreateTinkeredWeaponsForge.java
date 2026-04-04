@@ -2,6 +2,7 @@ package com.ridopipolop.createtinkeredweapons.forge;
 
 import com.ridopipolop.createtinkeredweapons.CreateTinkeredWeapons;
 import com.ridopipolop.createtinkeredweapons.forge.registry.ModItemsForge;
+import com.ridopipolop.createtinkeredweapons.forge.registry.ModPackets;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +15,7 @@ public class CreateTinkeredWeaponsForge {
     IEventBus eventBus = context.getModEventBus();
     CreateTinkeredWeapons.REGISTRATE.registerEventListeners(eventBus);
     CreateTinkeredWeapons.init();
+    ModPackets.registerPackets();
     ModItemsForge.register();
   }
 }

@@ -2,10 +2,17 @@ package com.ridopipolop.createtinkeredweapons.content.weapons.broad_glaive;
 
 import java.util.UUID;
 
+import javax.annotation.Nullable;
+
+import com.google.common.base.Supplier;
+import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import com.ridopipolop.createtinkeredweapons.PlatformHelper;
+import com.ridopipolop.createtinkeredweapons.registry.ModItems;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -34,6 +41,8 @@ public class BroadGlaiveItem extends Item implements Vanishable {
   public static final AttributeModifier rangeAttributeModifier = new AttributeModifier(
       UUID.fromString("ffe07123-760f-4174-9340-cf290be36139"), "Range modifier", RANGE_MODIFIER,
       AttributeModifier.Operation.ADDITION);
+  private static final Supplier<Multimap<Attribute, AttributeModifier>> rangeModifier = Suppliers
+      .memoize(() -> PlatformHelper.getRangeModifier(rangeAttributeModifier));
 
   // Constructor
   public BroadGlaiveItem(Properties properties) {
@@ -44,6 +53,31 @@ public class BroadGlaiveItem extends Item implements Vanishable {
     builder.put(Attributes.ATTACK_SPEED,
         new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", BASE_ATTACK_SPEED, Operation.ADDITION));
     this.defaultModifiers = builder.build();
+  }
+
+  public static void holdingGlaiveIncreasesRange(LivingEntity entity, CompoundTag persistentData) {
+    if (!(entity instanceof Player player))
+      return;
+
+    boolean holdinginMainHand = ModItems.BROAD_GLAIVE.isIn(player.getMainHandItem());
+    boolean wasHolding = persistentData.contains(GLAIVE_MARKER);
+
+    if (holdinginMainHand != wasHolding) {
+      if (!holdinginMainHand) {
+        player.getAttributes().removeAttributeModifiers(rangeModifier.get());
+        persistentData.remove(GLAIVE_MARKER);
+      } else {
+        player.getAttributes().addTransientAttributeModifiers(rangeModifier.get());
+        persistentData.putBoolean(GLAIVE_MARKER, true);
+      }
+    }
+  }
+
+  public static void addRangeToJoiningPlayersHoldingGlaive(Player player, @Nullable CompoundTag persistentData) {
+    if (persistentData == null)
+      return;
+    if (persistentData.contains(GLAIVE_MARKER))
+      player.getAttributes().addTransientAttributeModifiers(rangeModifier.get());
   }
 
   @Override
