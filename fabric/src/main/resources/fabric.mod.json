@@ -18,7 +18,7 @@
       "com.ridopipolop.createtinkeredweapons.fabric.CreateTinkeredWeaponsFabric"
     ],
     "client": [
-      "com.ridopipolop.createtinkeredweapons.client.CreateTinkeredWeaponsClient"
+      "com.ridopipolop.createtinkeredweapons.fabric.client.CreateTinkeredWeaponsFabricClient"
     ]
   },
   "depends": {

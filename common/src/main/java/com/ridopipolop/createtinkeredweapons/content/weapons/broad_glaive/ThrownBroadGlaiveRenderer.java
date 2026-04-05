@@ -4,8 +4,8 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import com.ridopipolop.createtinkeredweapons.CreateTinkeredWeapons;
-import com.ridopipolop.createtinkeredweapons.client.CreateTinkeredWeaponsClient;
 import com.ridopipolop.createtinkeredweapons.entity.ThrownBroadGlaive;
+import com.ridopipolop.createtinkeredweapons.registry.ModModelLayers;
 
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -22,7 +22,8 @@ public class ThrownBroadGlaiveRenderer extends EntityRenderer<ThrownBroadGlaive>
 
   public ThrownBroadGlaiveRenderer(EntityRendererProvider.Context context) {
     super(context);
-    this.model = new ThrownBroadGlaiveModel(context.bakeLayer(CreateTinkeredWeaponsClient.THROWN_BROAD_GLAIVE));
+    this.model = new ThrownBroadGlaiveModel(context.bakeLayer(
+        ModModelLayers.THROWN_BROAD_GLAIVE));
   }
 
   @Override
