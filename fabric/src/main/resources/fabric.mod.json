@@ -16,6 +16,9 @@
   "entrypoints": {
     "main": [
       "com.ridopipolop.createtinkeredweapons.fabric.CreateTinkeredWeaponsFabric"
+    ],
+    "client": [
+      "com.ridopipolop.createtinkeredweapons.client.CreateTinkeredWeaponsClient"
     ]
   },
   "depends": {

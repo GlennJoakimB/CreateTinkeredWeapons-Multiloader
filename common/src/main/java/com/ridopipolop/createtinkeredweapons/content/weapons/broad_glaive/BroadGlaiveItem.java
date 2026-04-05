@@ -9,10 +9,14 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import com.ridopipolop.createtinkeredweapons.PlatformHelper;
+import com.ridopipolop.createtinkeredweapons.entity.ThrownBroadGlaive;
 import com.ridopipolop.createtinkeredweapons.registry.ModItems;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -22,6 +26,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow.Pickup;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
@@ -78,6 +83,35 @@ public class BroadGlaiveItem extends Item implements Vanishable {
       return;
     if (persistentData.contains(GLAIVE_MARKER))
       player.getAttributes().addTransientAttributeModifiers(rangeModifier.get());
+  }
+
+  @Override
+  public void releaseUsing(ItemStack stack, Level level, LivingEntity entityLiving, int timeCharged) {
+    if (!(entityLiving instanceof Player player))
+      return;
+
+    int i = this.getUseDuration(stack) - timeCharged;
+    if (i >= THROW_THRESHOLD_TIME) {
+      if (!level.isClientSide) {
+        stack.hurtAndBreak(1, player, (p) -> {
+          p.broadcastBreakEvent(player.getUsedItemHand());
+        });
+        ThrownBroadGlaive thrownBroadGlaive = new ThrownBroadGlaive(level, player, stack);
+
+        thrownBroadGlaive.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, SHOOT_POWER, 1.0F);
+        if (player.getAbilities().instabuild) {
+          thrownBroadGlaive.pickup = Pickup.CREATIVE_ONLY;
+        }
+
+        level.addFreshEntity(thrownBroadGlaive);
+        level.playSound((Player) null, thrownBroadGlaive, SoundEvents.TRIDENT_THROW, SoundSource.PLAYERS, 1.0F, 1.0F);
+        if (!player.getAbilities().instabuild) {
+          player.getInventory().removeItem(stack);
+        }
+
+        player.awardStat(Stats.ITEM_USED.get(this));
+      }
+    }
   }
 
   @Override
