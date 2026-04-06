@@ -3,9 +3,19 @@ Create: Tinkered Weapons is an addon mod for Create, implementing some new and u
 
 ## Features
 > [!IMPORTANT]
-> The mod is very experimental
+> The mod is experimental, and done for fun.
+> Take quality code as a blessing.
 
-To be added
+New weapons:
+- Broad Glaive
+  - Offers extended reach, to easier hit enemies at a safe distance
+  - Throwable like a trident
+
+- Impact Axe
+  - Has two modes to toggle between: 
+    - `Knockback mode` dealing increased knockback,
+    - `Explosive mode` dealing explosive damage at the cost of more durability. 
+  - Ability to launch the player backwards or upwards when rightclicking on ground
 
 
 ## License

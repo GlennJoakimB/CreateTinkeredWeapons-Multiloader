@@ -1,0 +1,173 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "createtinkeredweapons:item/impact_axe"
+	},
+	"elements": [
+		{
+			"name": "Blade",
+			"from": [7.75, 9.75, 2],
+			"to": [8.25, 16.75, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9.75, 2]},
+			"faces": {
+				"north": {"uv": [0, 8.5, 0.5, 15.5], "texture": "#1"},
+				"east": {"uv": [4, 8.5, 0, 15.5], "texture": "#1"},
+				"south": {"uv": [3.5, 8.5, 4, 15.5], "texture": "#1"},
+				"west": {"uv": [0, 8.5, 4, 15.5], "texture": "#1"},
+				"up": {"uv": [0, 8.5, 4, 9], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [4, 15.5, 0, 16], "rotation": 90, "texture": "#1"}
+			}
+		},
+		{
+			"name": "Head",
+			"from": [7, 12, 6],
+			"to": [9, 14.5, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 12, 6.5]},
+			"faces": {
+				"north": {"uv": [8, 2, 10, 4.5], "texture": "#1"},
+				"east": {"uv": [14, 2, 10, 4.5], "texture": "#1"},
+				"south": {"uv": [14, 2, 16, 4.5], "texture": "#1"},
+				"west": {"uv": [10, 2, 14, 4.5], "texture": "#1"},
+				"up": {"uv": [8, 0, 12, 2], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [16, 2, 12, 0], "rotation": 90, "texture": "#1"}
+			}
+		},
+		{
+			"name": "Pistonhead",
+			"from": [7.25, 12.5, 5],
+			"to": [8.75, 14, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13.25, 5.5]},
+			"faces": {
+				"north": {"uv": [2.5, 3, 4, 4.5], "texture": "#1"},
+				"east": {"uv": [2.5, 3, 3.5, 4.5], "texture": "#1"},
+				"south": {"uv": [2.5, 3, 4, 4.5], "texture": "#1"},
+				"west": {"uv": [2.5, 3, 3.5, 4.5], "texture": "#1"},
+				"up": {"uv": [2.5, 3, 3.5, 4.5], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [2.5, 3, 3.5, 4.5], "rotation": 90, "texture": "#1"}
+			}
+		},
+		{
+			"name": "BackThing",
+			"from": [7.25, 12.25, 10],
+			"to": [8.75, 14.25, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.75, 12.5, 10]},
+			"faces": {
+				"east": {"uv": [6.5, 4.5, 4.5, 6.5], "texture": "#1"},
+				"south": {"uv": [6.5, 4.5, 8, 6.5], "texture": "#1"},
+				"west": {"uv": [4.5, 4.5, 6.5, 6.5], "texture": "#1"},
+				"up": {"uv": [8, 4.5, 9.5, 6.5], "texture": "#1"},
+				"down": {"uv": [8, 6.5, 9.5, 4.5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "UpperHandleBracket",
+			"from": [7, 10, 7],
+			"to": [9, 11, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 8]},
+			"faces": {
+				"north": {"uv": [2.5, 2, 4.5, 3], "texture": "#1"},
+				"east": {"uv": [2.5, 2, 4.5, 3], "texture": "#1"},
+				"south": {"uv": [2.5, 2, 4.5, 3], "texture": "#1"},
+				"west": {"uv": [2.5, 2, 4.5, 3], "texture": "#1"},
+				"up": {"uv": [2.5, 0, 4.5, 2], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [2.5, 0, 4.5, 2], "rotation": 270, "texture": "#1"}
+			}
+		},
+		{
+			"name": "Handguard",
+			"from": [7.25, 8, 7.25],
+			"to": [8.75, 10, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.25, 8, 7.25]},
+			"faces": {
+				"north": {"uv": [4.5, 0, 6.5, 1.5], "rotation": 90, "texture": "#1"},
+				"east": {"uv": [6.5, 1.5, 4.5, 3], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [4.5, 3, 6.5, 4.5], "rotation": 90, "texture": "#1"},
+				"west": {"uv": [6.5, 1.5, 4.5, 3], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [4.5, 3, 6, 4.5], "rotation": 90, "texture": "#1"}
+			}
+		},
+		{
+			"name": "Trigger",
+			"from": [8, 6.5, 5.75],
+			"to": [8, 9.5, 7.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7, 6.25]},
+			"faces": {
+				"east": {"uv": [3.5, 5, 2, 8], "texture": "#1"},
+				"west": {"uv": [2, 5, 3.5, 8], "texture": "#1"}
+			}
+		},
+		{
+			"name": "Handle",
+			"from": [7.5, 0, 7.5],
+			"to": [8.5, 8, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 8], "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 8], "texture": "#1"},
+				"south": {"uv": [0, 0, 1, 8], "texture": "#1"},
+				"west": {"uv": [0, 0, 1, 8], "texture": "#1"}
+			}
+		},
+		{
+			"name": "HandlePommel",
+			"from": [7.25, -2, 7.25],
+			"to": [8.75, 0, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 1.5, 7.5]},
+			"faces": {
+				"north": {"uv": [1, 0, 2.5, 2], "texture": "#1"},
+				"east": {"uv": [1, 0, 2.5, 2], "texture": "#1"},
+				"south": {"uv": [1, 0, 2.5, 2], "texture": "#1"},
+				"west": {"uv": [1, 0, 2.5, 2], "texture": "#1"},
+				"up": {"uv": [1, 2, 2.5, 3.5], "texture": "#1"},
+				"down": {"uv": [1, 2, 2.5, 3.5], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0.75, 1.25],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 0.75, 1.25],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"scale": [1, 1, 0.85]
+		},
+		"firstperson_lefthand": {
+			"scale": [1, 1, 0.85]
+		},
+		"ground": {
+			"rotation": [0, 0, 90],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"gui": {
+			"rotation": [-45, 135, 70],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"fixed": {
+			"rotation": [90, -45, 90]
+		},
+		"on_shelf": {
+			"rotation": [0, 90, 0],
+			"scale": [1.5, 1.5, 1.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "Head",
+			"origin": [6, 12, 6.5],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		},
+		{
+			"name": "Handle",
+			"origin": [7, 10, 7],
+			"color": 0,
+			"children": [4, 5, 6, 7, 8]
+		}
+	]
+}
