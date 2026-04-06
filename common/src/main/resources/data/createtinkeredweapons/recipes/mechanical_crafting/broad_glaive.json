@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "S": {
+      "item": "create:sturdy_sheet"
+    },
+    "G": {
+      "item": "create:cogwheel"
+    },
+    "H": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    "BGB",
+    " H ",
+    " H "
+  ],
+  "result": {
+    "item": "createtinkeredweapons:broad_glaive"
+  }
+}
