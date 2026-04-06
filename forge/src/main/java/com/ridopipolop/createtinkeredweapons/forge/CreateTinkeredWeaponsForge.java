@@ -1,6 +1,7 @@
 package com.ridopipolop.createtinkeredweapons.forge;
 
 import com.ridopipolop.createtinkeredweapons.CreateTinkeredWeapons;
+import com.ridopipolop.createtinkeredweapons.forge.registry.ModCreativeTab;
 import com.ridopipolop.createtinkeredweapons.forge.registry.ModEntityTypesForge;
 import com.ridopipolop.createtinkeredweapons.forge.registry.ModItemsForge;
 import com.ridopipolop.createtinkeredweapons.forge.registry.ModPackets;
@@ -27,5 +28,6 @@ public class CreateTinkeredWeaponsForge {
     CreateTinkeredWeapons.init();
     ModPackets.registerPackets();
     ModItemsForge.register();
+    ModCreativeTab.register(eventBus);
   }
 }
