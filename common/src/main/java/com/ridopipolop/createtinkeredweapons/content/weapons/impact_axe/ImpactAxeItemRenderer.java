@@ -26,12 +26,19 @@ public class ImpactAxeItemRenderer extends CustomRenderedItemModelRenderer {
       ItemDisplayContext transformType, PoseStack ms, MultiBufferSource buffer, int light, int overlay) {
 
     boolean isExplosiveMode = ImpactAxeItem.isExplosiveMode(stack);
+    float worldTime = AnimationTickHolder.getRenderTime() / 10;
+    float angle = worldTime * (isExplosiveMode ? 30 : 20);
     BakedModel baseModel = isExplosiveMode
         ? EXPLOSIVE_MODEL.get()
         : model.getOriginalModel();
 
+    // Main model
     renderer.render(baseModel, light);
-    ms.mulPose(Axis.YP.rotationDegrees(ScrollValueHandler.getScroll(AnimationTickHolder.getPartialTicks())));
+
+    // Cog animation
+    ms.pushPose();
+    ms.mulPose(Axis.YP.rotationDegrees(angle));
     renderer.render(GEAR.get(), light);
+    ms.popPose();
   }
 }
