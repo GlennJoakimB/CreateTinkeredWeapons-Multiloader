@@ -1,10 +1,10 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"parent": "createtinkeredweapons:item/broad_glaive/item",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "createtinkeredweapons:item/broad_glaive",
-		"particle": "createtinkeredweapons:item/broad_glaive"
+		"0": "createtinkeredweapons:item/broad_glaive"
 	},
 	"elements": [
 		{
