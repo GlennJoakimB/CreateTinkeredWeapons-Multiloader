@@ -38,7 +38,7 @@ public class BroadGlaiveItem extends Item implements Vanishable {
   public static final int THROW_THRESHOLD_TIME = 10;
   public static final float RANGE_MODIFIER = 1.2F;
   public static final float BASE_DAMAGE = 6.0F;
-  public static final float BASE_ATTACK_SPEED = -2.0F;
+  public static final float BASE_ATTACK_SPEED = -2.3F;
   public static final float SHOOT_POWER = 2.5F;
   private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 

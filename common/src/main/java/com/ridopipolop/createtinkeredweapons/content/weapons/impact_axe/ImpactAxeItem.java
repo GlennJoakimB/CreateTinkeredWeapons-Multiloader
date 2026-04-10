@@ -31,7 +31,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
 public class ImpactAxeItem extends AxeItem {
-  public static final float BASE_DAMAGE = 7.0F;
+  public static final float BASE_DAMAGE = 6.0F;
   public static final float BASE_ATTACK_SPEED = -3.0F;
   public static final int BASE_DURABILITY = 250;
   private static final String EXPLOSIVE_MODE_KEY = "ExplosiveMode";
