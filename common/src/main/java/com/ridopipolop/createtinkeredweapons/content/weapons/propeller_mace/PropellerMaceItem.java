@@ -18,7 +18,7 @@ import net.minecraft.world.phys.Vec3;
 
 public class PropellerMaceItem extends SwordItem {
   public static final int THROW_THRESHOLD_TIME = 10;
-  public static final int LAUNCH_POWER = 1;
+  public static final double LAUNCH_POWER = 1;
   public static final int BASE_DAMAGE = 4;
   public static final float BASE_ATTACK_SPEED = -3.0F;
   private static final String DEPLOYED_MODE_KEY = "DeployedMode";
@@ -37,8 +37,7 @@ public class PropellerMaceItem extends SwordItem {
       return;
 
     Vec3 look = player.getLookAngle();
-    double speed = 3.0 * ((1.0 + LAUNCH_POWER) / 4.0);
-    player.addDeltaMovement(look.scale(speed));
+    player.addDeltaMovement(look.scale(LAUNCH_POWER));
     player.resetFallDistance(); // Cancel fall damage
     player.hurtMarked = true; // For velocity synchronization
 

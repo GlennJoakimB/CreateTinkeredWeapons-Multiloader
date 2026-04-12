@@ -6,7 +6,6 @@ import net.minecraft.world.phys.Vec3;
 
 public class PropellerMaceEventHandler {
 
-
   public static void onPlayerTick(Player player) {
     ItemStack mainHand = player.getMainHandItem();
     ItemStack offHand = player.getOffhandItem();

@@ -158,7 +158,7 @@ public class ImpactAxeItem extends AxeItem {
 
       // Apply knockback
       Vec3 velocity = lookDirection.scale(-launchStrength); // Flip value to negative
-      player.push(velocity.x, velocity.y, velocity.z);
+      player.addDeltaMovement(velocity);
       player.setOnGround(false);
       player.resetFallDistance(); // Cancel fall damage
       player.hurtMarked = true; // For velocity synchronization
