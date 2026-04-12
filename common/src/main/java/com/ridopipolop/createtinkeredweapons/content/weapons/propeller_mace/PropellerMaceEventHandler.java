@@ -18,9 +18,9 @@ public class PropellerMaceEventHandler {
     // Disable if player lands on the ground while deployed
     if (player.onGround()) {
       if (mainHandDeployed)
-        PropellerMaceItem.disableDeployedMode(mainHand);
+        PropellerMaceItem.setDeployedMode(mainHand, false);
       if (offHandDeployed)
-        PropellerMaceItem.disableDeployedMode(offHand);
+        PropellerMaceItem.setDeployedMode(offHand, false);
       return; // no glide effect needed
     }
 

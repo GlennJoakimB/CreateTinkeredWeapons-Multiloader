@@ -1,8 +1,12 @@
 package com.ridopipolop.createtinkeredweapons.content.weapons.propeller_mace;
 
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
@@ -10,15 +14,43 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 
 public class PropellerMaceItem extends SwordItem {
+  public static final int THROW_THRESHOLD_TIME = 10;
+  public static final int LAUNCH_POWER = 1;
   public static final int BASE_DAMAGE = 4;
   public static final float BASE_ATTACK_SPEED = -3.0F;
   private static final String DEPLOYED_MODE_KEY = "DeployedMode";
 
-
   public PropellerMaceItem(Properties properties) {
     super(Tiers.IRON, BASE_DAMAGE, BASE_ATTACK_SPEED, properties);
+  }
+
+  @Override
+  public void releaseUsing(ItemStack stack, Level level, LivingEntity entityLiving, int timeCharged) {
+    if (!(entityLiving instanceof Player player))
+      return;
+
+    int i = this.getUseDuration(stack) - timeCharged;
+    if (i < THROW_THRESHOLD_TIME)
+      return;
+
+    Vec3 look = player.getLookAngle();
+    double speed = 3.0 * ((1.0 + LAUNCH_POWER) / 4.0);
+    player.addDeltaMovement(look.scale(speed));
+    player.resetFallDistance(); // Cancel fall damage
+    player.hurtMarked = true; // For velocity synchronization
+
+    // Launch the player up a little to reduce ground friction
+    if (player.onGround()) {
+      player.move(MoverType.SELF, new Vec3(0, 1.2, 0));
+    }
+
+    // Audio and visual feedback
+    setDeployedMode(stack, true);
+    level.playSound(null, player.getX(), player.getY(), player.getZ(),
+        SoundEvents.TRIDENT_RIPTIDE_1, SoundSource.PLAYERS, 0.5F, 0.8F);
   }
 
   @Override
@@ -38,11 +70,11 @@ public class PropellerMaceItem extends SwordItem {
   }
 
   private static void toggleMode(ItemStack stack) {
-    stack.getOrCreateTag().putBoolean(DEPLOYED_MODE_KEY, !isDeployedMode(stack));
+    setDeployedMode(stack, !isDeployedMode(stack));
   }
 
-  public static void disableDeployedMode(ItemStack stack) {
-    stack.getOrCreateTag().putBoolean(DEPLOYED_MODE_KEY, false);
+  public static void setDeployedMode(ItemStack stack, boolean state) {
+    stack.getOrCreateTag().putBoolean(DEPLOYED_MODE_KEY, state);
   }
 
   public static boolean isDeployedMode(ItemStack stack) {
