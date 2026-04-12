@@ -2,6 +2,7 @@ package com.ridopipolop.createtinkeredweapons.forge.events;
 
 import com.ridopipolop.createtinkeredweapons.CreateTinkeredWeapons;
 import com.ridopipolop.createtinkeredweapons.content.weapons.broad_glaive.BroadGlaiveItem;
+import com.ridopipolop.createtinkeredweapons.content.weapons.propeller_mace.PropellerMaceEventHandler;
 import com.ridopipolop.createtinkeredweapons.forge.registry.ModPackets;
 import com.ridopipolop.createtinkeredweapons.forge.packets.BroadGlaiveInteractionPacket;
 import com.ridopipolop.createtinkeredweapons.registry.ModItems;
@@ -11,6 +12,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingTickEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -31,6 +33,13 @@ public class ForgeEvents {
   public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
     Player player = event.getEntity();
     BroadGlaiveItem.addRangeToJoiningPlayersHoldingGlaive(player, player.getPersistentData());
+  }
+
+  @SubscribeEvent
+  public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+    if (event.phase == TickEvent.Phase.END) {
+      PropellerMaceEventHandler.onPlayerTick(event.player);
+    }
   }
 
   @SubscribeEvent
