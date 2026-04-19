@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": true,
+  "key": {
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "B": {
+      "item": "create:brass_sheet"
+    },
+    "S": {
+      "item": "create:sturdy_sheet"
+    },
+    "E": {
+      "item": "create:blaze_burner"
+    },
+    "H": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SSPSS",
+    " BEB ",
+    "  H  ",
+    "  H  "
+  ],
+  "result": {
+    "item": "createtinkeredweapons:propeller_mace"
+  }
+}

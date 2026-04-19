@@ -32,7 +32,7 @@ public class PropellerMaceItemRenderer extends CustomRenderedItemModelRenderer {
       renderer.render(DEPLOYED_MODEL.get(), light);
 
       float worldTime = AnimationTickHolder.getRenderTime() / 10;
-      float angle = worldTime * 60;
+      float angle = worldTime * 600;
 
       // Rotor animations
       ms.pushPose();
