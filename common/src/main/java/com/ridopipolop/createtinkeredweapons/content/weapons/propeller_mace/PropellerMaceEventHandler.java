@@ -9,10 +9,8 @@ public class PropellerMaceEventHandler {
   public static void onPlayerTick(Player player) {
     ItemStack mainHand = player.getMainHandItem();
     ItemStack offHand = player.getOffhandItem();
-    boolean mainHandDeployed = mainHand.getItem() instanceof PropellerMaceItem
-        && PropellerMaceItem.isDeployedMode(mainHand);
-    boolean offHandDeployed = offHand.getItem() instanceof PropellerMaceItem
-        && PropellerMaceItem.isDeployedMode(offHand);
+    boolean mainHandDeployed = isDeployed(mainHand);
+    boolean offHandDeployed = isDeployed(offHand);
 
     // Disable if player lands on the ground while deployed
     if (player.onGround()) {
@@ -20,19 +18,26 @@ public class PropellerMaceEventHandler {
         PropellerMaceItem.setDeployedMode(mainHand, false);
       if (offHandDeployed)
         PropellerMaceItem.setDeployedMode(offHand, false);
-      return; // no glide effect needed
+      return;
     }
 
     // Applying glide effect
     if (mainHandDeployed || offHandDeployed) {
-      Vec3 velocity = player.getDeltaMovement();
+      applyGlide(player);
+    }
+  }
 
-      if (velocity.y < -0.1) { // only slow a downward fall
-        double glideY = Math.max(velocity.y * 0.65, -1.0); // dampen + cap fall speed
-        player.setDeltaMovement(velocity.x * 0.98, glideY, velocity.z * 0.98);
-        player.fallDistance = 0; // prevent fall damage while gliding
-        player.resetFallDistance();
-      }
+  private static boolean isDeployed(ItemStack stack) {
+    return stack.getItem() instanceof PropellerMaceItem
+        && PropellerMaceItem.isDeployedMode(stack);
+  }
+
+  private static void applyGlide(Player player) {
+    Vec3 velocity = player.getDeltaMovement();
+    if (velocity.y < -0.1) {
+      double glideY = Math.max(velocity.y * 0.65, -1.0); // dampen + cap fall speed
+      player.setDeltaMovement(velocity.x * 0.98, glideY, velocity.z * 0.98);
+      player.resetFallDistance();
     }
   }
 }
