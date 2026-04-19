@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "createtinkeredweapons:item/propeller_mace/item_deployed",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "createtinkeredweapons:item/propeller_mace"
+	},
+	"elements": [
+    {
+			"name": "rotor",
+			"from": [8, 16.75, 7],
+			"to": [20, 16.75, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16.75, 8]},
+			"faces": {
+				"up": {"uv": [10.5, 16, 8.5, 4], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8.5, 16, 10.5, 4], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "rotor",
+			"from": [-4, 16.75, 7],
+			"to": [8, 16.75, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16.75, 8]},
+			"faces": {
+				"up": {"uv": [8.5, 4, 10.5, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10.5, 4, 8.5, 16], "rotation": 90, "texture": "#0"}
+			}
+		}
+	]
+}

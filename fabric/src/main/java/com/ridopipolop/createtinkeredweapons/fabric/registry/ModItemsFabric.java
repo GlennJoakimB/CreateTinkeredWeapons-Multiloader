@@ -7,6 +7,7 @@ import com.ridopipolop.createtinkeredweapons.content.weapons.broad_glaive.BroadG
 import com.ridopipolop.createtinkeredweapons.content.weapons.impact_axe.ImpactAxeItem;
 import com.ridopipolop.createtinkeredweapons.content.weapons.impact_axe.ImpactAxeItemRenderer;
 import com.ridopipolop.createtinkeredweapons.content.weapons.propeller_mace.PropellerMaceItem;
+import com.ridopipolop.createtinkeredweapons.content.weapons.propeller_mace.PropellerMaceItemRenderer;
 import com.ridopipolop.createtinkeredweapons.registry.ModItems;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -30,10 +31,7 @@ public class ModItemsFabric {
     ModItems.PROPELLER_MACE = REGISTRATE
         .item("propeller_mace", PropellerMaceItem::new)
         .properties(p -> p.stacksTo(1).durability(500))
-
-        // TODO: Need to add custom renderer and model
-        .transform(CreateRegistrate.customRenderedItem(() -> BroadGlaiveItemRenderer::new))
-
+        .transform(CreateRegistrate.customRenderedItem(() -> PropellerMaceItemRenderer::new))
         .model(AssetLookup.itemModelWithPartials())
         .register();
   }

@@ -3,8 +3,8 @@ package com.ridopipolop.createtinkeredweapons.forge.content.weapons;
 import java.util.function.Consumer;
 
 import com.ridopipolop.createtinkeredweapons.CreateTinkeredWeapons;
-import com.ridopipolop.createtinkeredweapons.content.weapons.broad_glaive.BroadGlaiveItemRenderer;
 import com.ridopipolop.createtinkeredweapons.content.weapons.propeller_mace.PropellerMaceItem;
+import com.ridopipolop.createtinkeredweapons.content.weapons.propeller_mace.PropellerMaceItemRenderer;
 import com.simibubi.create.foundation.item.render.SimpleCustomRenderer;
 
 import net.minecraftforge.api.distmarker.Dist;
@@ -22,7 +22,6 @@ public class PropellerMaceItemForge extends PropellerMaceItem {
   @Override
   @OnlyIn(Dist.CLIENT)
   public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-    // TODO: Need to add custom renderer and model
-    consumer.accept(SimpleCustomRenderer.create(this, new BroadGlaiveItemRenderer()));
+    consumer.accept(SimpleCustomRenderer.create(this, new PropellerMaceItemRenderer()));
   }
 }
