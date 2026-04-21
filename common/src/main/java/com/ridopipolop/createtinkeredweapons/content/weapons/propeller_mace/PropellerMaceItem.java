@@ -40,6 +40,9 @@ public class PropellerMaceItem extends SwordItem {
     player.addDeltaMovement(look.scale(LAUNCH_POWER));
     player.resetFallDistance(); // Cancel fall damage
     player.hurtMarked = true; // For velocity synchronization
+    stack.hurtAndBreak(1, player, (p) -> {
+      p.broadcastBreakEvent(player.getUsedItemHand());
+    });
 
     // Launch the player up a little to reduce ground friction
     if (player.onGround()) {
