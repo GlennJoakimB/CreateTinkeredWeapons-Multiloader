@@ -68,63 +68,63 @@
 		},
 		{
 			"name": "rotor_hub",
-			"from": [7.25, 16.25, 7.25],
-			"to": [8.75, 18.25, 8.75],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16.25, 8]},
+			"from": [7.25, 16.5, 7.25],
+			"to": [8.75, 18.5, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16.5, 8]},
 			"faces": {
-				"north": {"uv": [6.5, 8, 8.5, 9.5], "rotation": 90, "texture": "#0"},
-				"east": {"uv": [6.5, 8, 8.5, 9.5], "rotation": 90, "texture": "#0"},
-				"south": {"uv": [6.5, 8, 8.5, 9.5], "rotation": 90, "texture": "#0"},
-				"west": {"uv": [6.5, 8, 8.5, 9.5], "rotation": 90, "texture": "#0"},
-				"up": {"uv": [6.5, 9.5, 8, 11], "texture": "#0"}
+				"north": {"uv": [6.5, 7.5, 8.5, 9], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [6.5, 7.5, 8.5, 9], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6.5, 7.5, 8.5, 9], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [6.5, 7.5, 8.5, 9], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [6.5, 9, 8, 10.5], "texture": "#0"}
 			}
 		},
 		{
 			"name": "shroud_radiator",
-			"from": [6, 15.25, 6],
-			"to": [10, 16.25, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15.25, 8]},
+			"from": [6, 15.5, 6],
+			"to": [10, 16.5, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15.5, 8]},
 			"faces": {
-				"north": {"uv": [4.5, 3, 8.5, 4], "texture": "#0"},
-				"east": {"uv": [4.5, 3, 8.5, 4], "texture": "#0"},
-				"south": {"uv": [4.5, 3, 8.5, 4], "texture": "#0"},
-				"west": {"uv": [4.5, 3, 8.5, 4], "texture": "#0"},
-				"up": {"uv": [4.5, 4, 8.5, 8], "texture": "#0"},
-				"down": {"uv": [4.5, 4, 8.5, 8], "texture": "#0"}
+				"north": {"uv": [4.5, 2.5, 8.5, 3.5], "texture": "#0"},
+				"east": {"uv": [4.5, 2.5, 8.5, 3.5], "texture": "#0"},
+				"south": {"uv": [4.5, 2.5, 8.5, 3.5], "texture": "#0"},
+				"west": {"uv": [4.5, 2.5, 8.5, 3.5], "texture": "#0"},
+				"up": {"uv": [4.5, 3.5, 8.5, 7.5], "texture": "#0"},
+				"down": {"uv": [4.5, 3.5, 8.5, 7.5], "texture": "#0"}
 			}
 		},
 		{
 			"name": "cylinder_head",
-			"from": [7, 13.25, 5],
-			"to": [9, 15.25, 11],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 13.25, 8]},
+			"from": [4.75, 13.5, 7],
+			"to": [11.25, 15.5, 9],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 13.5, 8]},
 			"faces": {
-				"north": {"uv": [4.5, 8, 6.5, 10], "texture": "#0"},
-				"east": {"uv": [4.5, 10, 6.5, 16], "rotation": 90, "texture": "#0"},
-				"south": {"uv": [4.5, 8, 6.5, 10], "texture": "#0"},
-				"west": {"uv": [4.5, 10, 6.5, 16], "rotation": 90, "texture": "#0"},
-				"up": {"uv": [4.5, 10, 6.5, 16], "texture": "#0"},
-				"down": {"uv": [4.5, 10, 6.5, 16], "texture": "#0"}
+				"north": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [4.5, 7.5, 6.5, 9.5], "texture": "#0"},
+				"south": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [4.5, 7.5, 6.5, 9.5], "texture": "#0"},
+				"up": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 90, "texture": "#0"}
 			}
 		},
 		{
 			"name": "cylinder_head",
-			"from": [5, 13.25, 7],
-			"to": [11, 15.25, 9],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 13.25, 8]},
+			"from": [7, 13.5, 4.75],
+			"to": [9, 15.5, 11.25],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 13.5, 8]},
 			"faces": {
-				"north": {"uv": [4.5, 10, 6.5, 16], "rotation": 90, "texture": "#0"},
-				"east": {"uv": [4.5, 8, 6.5, 10], "texture": "#0"},
-				"south": {"uv": [4.5, 10, 6.5, 16], "rotation": 90, "texture": "#0"},
-				"west": {"uv": [4.5, 8, 6.5, 10], "texture": "#0"},
-				"up": {"uv": [4.5, 10, 6.5, 16], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [4.5, 10, 6.5, 16], "rotation": 90, "texture": "#0"}
+				"north": {"uv": [4.5, 7.5, 6.5, 9.5], "texture": "#0"},
+				"east": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4.5, 7.5, 6.5, 9.5], "texture": "#0"},
+				"west": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [4.5, 9.5, 6.5, 16], "rotation": 180, "texture": "#0"}
 			}
 		},
 		{
 			"name": "engine_body",
 			"from": [6.25, 13, 6.25],
-			"to": [9.75, 15.25, 9.75],
+			"to": [9.75, 15.5, 9.75],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13, 8]},
 			"faces": {
 				"north": {"uv": [1, 6.5, 4.5, 9], "texture": "#0"},
