@@ -8,9 +8,9 @@
 	"elements": [
 		{
 			"name": "rotor",
-			"from": [7, 17.25, 5],
-			"to": [9, 17.25, 11],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.25, 8]},
+			"from": [7, 17.5, 5],
+			"to": [9, 17.5, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.5, 8]},
 			"faces": {
 				"up": {"uv": [8.5, 1, 10.5, 7], "texture": "#0"},
 				"down": {"uv": [8.5, 7, 10.5, 1], "texture": "#0"}
@@ -18,9 +18,9 @@
 		},
 		{
 			"name": "rotor_tip",
-			"from": [7, 8.25, 11],
-			"to": [9, 17.25, 11],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.25, 11]},
+			"from": [7, 8.5, 11],
+			"to": [9, 17.5, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.5, 11]},
 			"faces": {
 				"north": {"uv": [10.5, 7, 8.5, 16], "texture": "#0"},
 				"south": {"uv": [8.5, 7, 10.5, 16], "texture": "#0"}
@@ -28,9 +28,9 @@
 		},
 		{
 			"name": "rotor_tip",
-			"from": [7, 8.25, 5],
-			"to": [9, 17.25, 5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.25, 5]},
+			"from": [7, 8.5, 5],
+			"to": [9, 17.5, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17.5, 5]},
 			"faces": {
 				"north": {"uv": [8.5, 7, 10.5, 16], "texture": "#0"},
 				"south": {"uv": [10.5, 7, 8.5, 16], "texture": "#0"}
@@ -38,32 +38,32 @@
 		},
 		{
 			"name": "rotor",
-			"from": [5, 16.75, 7],
-			"to": [11, 16.75, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16.75, 8]},
+			"from": [5, 17, 7],
+			"to": [11, 17, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 17, 8]},
 			"faces": {
-				"up": {"uv": [8.5, 1, 10.5, 7], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [10.5, 1, 8.5, 7], "rotation": 90, "texture": "#0"},
 				"down": {"uv": [8.5, 1, 10.5, 7], "rotation": 90, "texture": "#0"}
 			}
 		},
 		{
 			"name": "rotor_tip",
-			"from": [11, 7.75, 7],
-			"to": [11, 16.75, 9],
-			"rotation": {"angle": 0, "axis": "z", "origin": [11, 16.75, 8]},
+			"from": [11, 8, 7],
+			"to": [11, 17, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 17, 8]},
 			"faces": {
-				"east": {"uv": [8.5, 7, 10.5, 16], "texture": "#0"},
-				"west": {"uv": [10.5, 7, 8.5, 16], "texture": "#0"}
+				"east": {"uv": [10.5, 7, 8.5, 16], "texture": "#0"},
+				"west": {"uv": [8.5, 7, 10.5, 16], "texture": "#0"}
 			}
 		},
 		{
 			"name": "rotor_tip",
-			"from": [5, 7.75, 7],
-			"to": [5, 16.75, 9],
-			"rotation": {"angle": 0, "axis": "z", "origin": [5, 16.75, 8]},
+			"from": [5, 8, 7],
+			"to": [5, 17, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 17, 8]},
 			"faces": {
-				"east": {"uv": [10.5, 7, 8.5, 16], "texture": "#0"},
-				"west": {"uv": [8.5, 7, 10.5, 16], "texture": "#0"}
+				"east": {"uv": [8.5, 7, 10.5, 16], "texture": "#0"},
+				"west": {"uv": [10.5, 7, 8.5, 16], "texture": "#0"}
 			}
 		},
 		{
@@ -127,11 +127,11 @@
 			"to": [9.75, 15.5, 9.75],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13, 8]},
 			"faces": {
-				"north": {"uv": [1, 6.5, 4.5, 9], "texture": "#0"},
-				"east": {"uv": [1, 6.5, 4.5, 9], "texture": "#0"},
-				"south": {"uv": [1, 6.5, 4.5, 9], "texture": "#0"},
-				"west": {"uv": [1, 6.5, 4.5, 9], "texture": "#0"},
-				"down": {"uv": [1, 3, 4.5, 6.5], "texture": "#0"}
+				"north": {"uv": [1, 3, 4.5, 5.5], "texture": "#0"},
+				"east": {"uv": [1, 3, 4.5, 5.5], "texture": "#0"},
+				"south": {"uv": [1, 3, 4.5, 5.5], "texture": "#0"},
+				"west": {"uv": [1, 3, 4.5, 5.5], "texture": "#0"},
+				"down": {"uv": [1, 5.5, 4.5, 9], "texture": "#0"}
 			}
 		},
 		{
@@ -212,7 +212,7 @@
 			"translation": [0, 1, 0],
 			"scale": [0.8, 0.8, 0.8]
 		},
-    "fixed": {
+		"fixed": {
 			"rotation": [90, -45, 90],
 			"translation": [-2, 2, 0]
 		}
