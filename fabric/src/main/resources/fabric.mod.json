@@ -26,5 +26,8 @@
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
     "create": "${create_version}"
-  }
+  },
+  "mixins": [
+    "createtinkeredweapons.fabric.mixins.json"
+  ]
 }

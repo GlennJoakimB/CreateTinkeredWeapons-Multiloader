@@ -140,8 +140,7 @@
 			"scale": [1, 1, 0.85]
 		},
 		"ground": {
-			"rotation": [0, 0, 90],
-			"scale": [1.5, 1.5, 1.5]
+			"rotation": [0, 0, 90]
 		},
 		"gui": {
 			"rotation": [-45, 135, 70],

@@ -9,7 +9,7 @@ Create: Tinkered Weapons is an addon mod for Create, implementing some new and u
 New weapons:
 - Broad Glaive
   - Offers extended reach, to easier hit enemies at a safe distance
-  - Throwable like a trident
+  - Is throwable like a trident
 
 - Impact Axe
   - Has two modes to toggle between: 
@@ -17,6 +17,10 @@ New weapons:
     - `Explosive mode` dealing explosive damage at the cost of more durability. 
   - Ability to launch the player backwards or upwards when rightclicking on ground
 
+- Propeller Mace
+  - Has a deployable propeller that can slow the user's fall
+  - Functions as a weapon when needed
+  - Ability to launch the user up in the air while on the ground
 
 ## License
 This mod is available under the MIT license. See [LICENSE](LICENSE) for more information.
